@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	<title>Weather GitUp</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/services/weatherGetter.js"></script>
+	<script type="text/javascript" src='js/controllers/weatherCtrl.js'></script>
+</head>
+<body ng-app="weatherApp" ng-controller="weatherCtrl as ctrl">
+	<div class="container">
+		<h1>Find the Weather in any city</h1>
+		<input type="text" ng-model="ctrl.zip" placeholder="Please Enter Zip Code">
+		<button ng-click="ctrl.getWeather(ctrl.zip)">Click me for weather</button>
+		<pre>
+			{{ ctrl.weather.resp | json}}
+		</pre>
+	</div>
+
+</body>
+</html>
