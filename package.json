@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Tells you what to wear based on the weather",
   "main": "app.js",
+  "private": true,
   "dependencies": {
     "debug": "^2.1.1",
     "errorhandler": "^1.4.1",
