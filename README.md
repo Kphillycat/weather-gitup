@@ -5,4 +5,4 @@ Use
 ``` node server.js ```
 Open index.html to see all the thingz! ALL OF THEM!!!!
 
-If there are license issues follower the Instructions [here](http://docs.strongloop.com/display/SL/Managing+your+licenses)
+If there are license issues follow the Instructions [here](http://docs.strongloop.com/display/SL/Managing+your+licenses)
