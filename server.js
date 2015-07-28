@@ -63,6 +63,7 @@ ds.once('connected', function () {
   };
 
   // Expose the custom methods on the model to the REST API via loopback.remoteMethod
+  // The options 2nd argument is a Swagger spec for the API UI (https://github.com/swagger-api/swagger-ui)
   loopback.remoteMethod(
     WeatherService.forecast, {
       accepts: [
@@ -112,6 +113,8 @@ ds.once('connected', function () {
   app.use(loopback.urlNotFound());
   app.use(loopback.errorHandler());
 
+  // Quick check if run from command line of required by another module.
+  // Don't start if required.
   if (require.main === module) {
     app.start();
   }
